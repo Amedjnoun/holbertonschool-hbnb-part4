@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBnB - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <div class="logo-icon">H</div>
+                <span class="logo-text">HBnB</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="nav-link">
+                    <span class="icon">🏠</span> Back to Home
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h1>Login</h1>
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="Your email address"
+                           autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required
+                           placeholder="Your password"
+                           autocomplete="current-password">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+
+                <button type="submit" class="button">
+                    <span class="icon">🔐</span> Login
+                    <span class="loading-spinner" style="display: none;"></span>
+                </button>
+            </form>
+
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+
+            <form id="register-form" class="auth-form">
+                <h2>Create an Account</h2>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" required
+                           placeholder="Your email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" name="password" required
+                           placeholder="Choose a password">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-firstName">First Name</label>
+                    <input type="text" id="reg-firstName" name="firstName" required
+                           placeholder="Your first name">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-lastName">Last Name</label>
+                    <input type="text" id="reg-lastName" name="lastName" required
+                           placeholder="Your last name">
+                </div>
+
+                <button type="submit" class="button">
+                    <span class="icon">➕</span> Create an Account
+                    <span class="loading-spinner" style="display: none;"></span>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 HBnB - All rights reserved</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Terms of Use</a>
+                <a href="#" class="footer-link">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/login.js"></script>
+</body>
+</html>

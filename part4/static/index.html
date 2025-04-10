@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBnB - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/images/icon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <img src="/static/images/icon.png" alt="HBnB Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-links">
+                <a href="/login.html" class="nav-link" id="login-link">
+                    <span class="icon">👤</span> Login
+                </a>
+                <a href="/admin.html" class="nav-link admin-only" id="admin-link" style="display: none;">
+                    <span class="icon">⚙️</span> Administration
+                </a>
+                <a href="/create-place.html" class="nav-link" id="create-place-link" style="display: none;">
+                    <span class="icon">➕</span> Add a place
+                </a>
+                <button id="logout-button" class="nav-link" style="display: none;">
+                    <span class="icon">🚪</span> Logout
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="places-container">
+            <h1>Discover unique places</h1>
+            <div class="filters">
+                <div class="price-filter">
+                    <label for="price-filter">Maximum price:</label>
+                    <select id="price-filter">
+                        <option value="all">All prices</option>
+                        <option value="50">Up to €50</option>
+                        <option value="100">Up to €100</option>
+                        <option value="200">Up to €200</option>
+                        <option value="500">Up to €500</option>
+                    </select>
+                </div>
+            </div>
+            <div id="places-list" class="places-grid">
+                <div class="loading">Loading places...</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 HBnB - All rights reserved</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Terms of Use</a>
+                <a href="#" class="footer-link">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* Main container */
+.content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Filters */
+.filters {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.price-filter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price-filter input[type="range"] {
+    flex: 1;
+}
+
+#price-value {
+    min-width: 60px;
+}
+
+/* Places list */
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Place card */
+.place-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Place image */
+.place-card-image {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.place-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.place-card:hover .place-card-image img {
+    transform: scale(1.05);
+}
+
+.place-card-image.placeholder {
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    color: #dee2e6;
+}
+
+/* Card content */
+.place-card-content {
+    padding: 10px;
+}
+
+.place-card-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.place-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.place-price {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Amenities */
+.place-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
+}
+
+.amenity-tag {
+    background: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: #666;
+}
+
+.amenity-tag.more {
+    background: #e9ecef;
+    font-size: 0.9rem;
+}
+
+/* "No places" message */
+.no-places {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    color: #666;
+}
+
+/* Error messages */
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .places-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .place-card-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        padding: 0.75rem;
+    }
+
+    .price-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .place-card-image {
+        height: 150px;
+    }
+
+    .place-card-content {
+        padding: 0.75rem;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBnB - Administration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <div class="logo-icon">H</div>
+                <span class="logo-text">HBnB</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="nav-link">
+                    <span class="icon">🏠</span> Home
+                </a>
+                <button id="logout-button" class="nav-link">
+                    <span class="icon">🚪</span> Logout
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="admin-container">
+            <h1>Administration</h1>
+
+            <!-- User creation form -->
+            <section class="form-section">
+                <h2>Create a new user</h2>
+                <form id="create-user-form" class="admin-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="isAdmin" name="isAdmin">
+                        <label for="isAdmin">Administrator</label>
+                    </div>
+
+                    <button type="submit" class="button">
+                        <span class="icon">➕</span> Create user
+                        <span class="loading-spinner" style="display: none;"></span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- User list -->
+            <section class="users-section">
+                <h2>Users</h2>
+                <div id="users-list" class="users-grid">
+                    <div class="loading">Loading users...</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 HBnB - All rights reserved</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Terms of Use</a>
+                <a href="#" class="footer-link">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/admin.js"></script>
+</body>
+</html>

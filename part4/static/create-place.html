@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBnB - Create a Place</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/create-place.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <div class="logo-icon">H</div>
+                <span class="logo-text">HBnB</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="nav-link">
+                    <span class="icon">🏠</span> Back to Home
+                </a>
+                <a href="/admin.html" class="nav-link admin-only" id="admin-link" style="display: none;">
+                    <span class="icon">⚙️</span> Administration
+                </a>
+                <button id="logout-button" class="nav-link">
+                    <span class="icon">🚪</span> Logout
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h1>Create a new place</h1>
+            <form id="create-place-form" class="auth-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required
+                           placeholder="Name of your place"
+                           maxlength="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required
+                              placeholder="Describe your place in detail"
+                              maxlength="2000"
+                              rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="latitude">Latitude</label>
+                    <input type="number" id="latitude" name="latitude" required
+                           step="any"
+                           min="-90" max="90"
+                           placeholder="Ex: 48.8566">
+                </div>
+
+                <div class="form-group">
+                    <label for="longitude">Longitude</label>
+                    <input type="number" id="longitude" name="longitude" required
+                           step="any"
+                           min="-180" max="180"
+                           placeholder="Ex: 2.3522">
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price per night (€)</label>
+                    <input type="number" id="price" name="price" required
+                           min="1" max="10000" step="1"
+                           placeholder="Price in euros">
+                </div>
+
+                <div class="form-group">
+                    <label>Available amenities</label>
+                    <div class="amenities-grid" id="amenities-list">
+                        <!-- Amenities will be loaded dynamically here -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Photos (optional)</label>
+                    <div class="photos-container">
+                        <!-- Photo fields will be added here -->
+                        <button type="button" id="add-photo" class="button secondary">
+                            <span class="icon">📷</span> Add a photo
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="button">
+                    <span class="icon">➕</span> Create the place
+                    <span class="loading-spinner" style="display: none;"></span>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 HBnB - All rights reserved</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Terms of Use</a>
+                <a href="#" class="footer-link">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/create-place.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# Operating systems
+.DS_Store
+Thumbs.db
+.directory
+
+# Cache and temporary files
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache
+*.bak
+*.tmp
+*.temp
+
+# Generated documentation
+docs/_build/
+site/
+
+# Others
+.sass-cache/
+node_modules/
+coverage/
