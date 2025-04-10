@@ -4,5 +4,8 @@
 
 ## Part 2 : BM & API
 
-## Part 3 :
-WIP
+## Part 3 : Auth & DB
+
+## Part 4 : Simple Webclient
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HairBedsnBeers - Home</title>
+    <meta name="description" content="Find unique places to stay around the world with HairBedsnBeers">
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="HairBedsnBeers" class="logo">
+        </a>
+        <nav>
+            <a href="index.html" id="home-link" class="nav-link active">Home</a>
+            <a href="login.html" id="login-link" class="nav-link">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="filters">
+            <h2>Find Your Perfect Place</h2>
+
+            <div class="filter-controls">
+                <div class="filter-item">
+                    <label for="price-filter">Max Price per Night:</label>
+                    <select id="price-filter" name="price-filter" aria-label="Filter by maximum price per night">
+                        <option value="999999">All Prices</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="city-filter">City:</label>
+                    <select id="city-filter" name="city-filter" aria-label="Filter by city">
+                        <option value="all">All cities</option>
+                    </select>
+                </div>
+
+                <button id="apply-filters" class="btn-primary">Apply Filters</button>
+                <button id="clear-filters" class="btn-secondary">Clear Filters</button>
+            </div>
+
+            <div id="filter-summary" class="filter-summary">
+                <p>Showing all available places</p>
+            </div>
+        </section>
+
+        <section id="places">
+            <h2>Places</h2>
+
+            <!-- Loading state will be shown while fetching data -->
+            <div id="loading-indicator" class="loading-indicator">
+                <p>Loading places...</p>
+                <div class="spinner"></div>
+            </div>
+
+            <!-- Error message container -->
+            <div id="places-error" class="error-message" style="display: none;" role="alert"></div>
+
+            <!-- Places will be loaded here -->
+            <ul id="places-container" class="places-grid"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 HairBedsnBeers, all rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

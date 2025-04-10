@@ -235,6 +235,7 @@ class PlaceReviewList(Resource):
                 "id": review.id,
                 "text": review.text,
                 "rating": review.rating,
+                "user_id": review.user_id,
             })
 
         return reviews_data, 200

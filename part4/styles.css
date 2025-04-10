@@ -1,0 +1,559 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #F8F1E0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #B15522;
+    color: #F8F1E0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    padding-top: 12px;
+    border-top: 1px solid #B15522;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 1rem;
+    border-radius: 2px;
+    padding: 5px;
+    color: #F8F1E0;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #B15522;
+    display: inline-block;
+    color: #B15522;
+}
+
+#filter, #place-details, #reviews {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+h2, h3 {
+    margin-bottom: 1rem;
+}
+
+.place-info {
+    margin: 1.25rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.place-info .label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+place-info p {
+    margin-bottom: 0.75rem;
+}
+
+/* Cards about places */
+.place-card {
+    margin: 1.25rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Cards about reviews */
+.review-card {
+    margin: 1.25rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* define logo in navbar */
+.logo {
+    height: 84px; /* Increased from 70px by 20% */
+    width: auto;
+    margin-bottom: 0.625rem;
+}
+
+/* Define style about Login Form */
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 1.25rem auto;
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea, form select {
+    padding: 0.625rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    width: 100px;
+    margin: 0.938rem auto;
+    padding: 0.625rem;
+    background: #B15522;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s;
+}
+
+button:hover {
+    background: #C67242;
+    transform: scale(1.1);
+}
+
+/* remove tick in list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+/* link management without effect on image */
+a {
+    box-shadow: inset 0 0 0 0 #B15522;
+    text-decoration: none;
+    color: #B15522;
+    margin: 0 -0.25rem;
+    padding: 0 0.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+a:not(:has(img)):hover {
+    color: #F8F1E0;
+    box-shadow: inset 100px 0 0 0 #B15522;
+}
+
+/* footer management with a fix footer hover the page */
+footer {
+    background-color: #B15522;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #F8F1E0;
+}
+
+/* Button enhancements */
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    background: #B15522;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background: #C67242;
+    transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Secondary button style */
+.btn-secondary {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #F8F1E0;
+    border: 1px solid #B15522;
+    border-radius: 5px;
+    color: #B15522;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 0.75rem;
+}
+
+.btn-secondary:hover {
+    background: #F0E8D5;
+    transform: translateY(-2px);
+}
+
+/* Button container for multiple buttons */
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.button-group .btn-primary,
+.button-group .btn-secondary {
+    flex: 1;
+}
+
+/* Add Review form styling */
+.help-text {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.char-count {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: right;
+    margin-top: 0.25rem;
+}
+
+.char-count.warning {
+    color: #B15522;
+    font-weight: bold;
+}
+
+span.required {
+    color: #B15522;
+    font-weight: bold;
+}
+
+/* Error message styling */
+.error-message {
+    background-color: #FDD;
+    border-left: 4px solid #B15522;
+    color: #333;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border-radius: 0px 5px 5px 0px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form group for better spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Enhanced textarea styling */
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+textarea:focus, select:focus {
+    border-color: #B15522;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(177, 85, 34, 0.2);
+}
+
+textarea.invalid, select.invalid {
+    border-color: #B15522;
+    background-color: #FFF8F8;
+}
+
+/* Rating select styling */
+select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* Form actions container for button layout */
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .form-actions {
+        flex-direction: row;
+    }
+
+    .form-actions .btn-primary,
+    .form-actions .btn-secondary {
+        flex: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .place-card, .review-card, .place-info {
+        margin: 1rem 0;
+        padding: 0.75rem;
+    }
+}
+
+/* Filter section styling */
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.filter-summary {
+    padding: 0.75rem;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Places grid layout */
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.place-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.place-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.place-card-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.place-card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.place-card-price {
+    font-weight: bold;
+    color: #B15522;
+    margin-bottom: 0.5rem;
+}
+
+.place-card-location {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.place-card-description {
+    color: #555;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.place-card-link {
+    align-self: center;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #B15522;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: auto;
+    margin-top: auto;
+}
+
+.place-card-link:hover {
+    background-color: #C67242;
+    color: #fff;
+    box-shadow: none;
+}
+
+/* Loading indicator */
+.loading-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(177, 85, 34, 0.2);
+    border-top-color: #B15522;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-top: 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Empty state for places */
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.empty-state p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Reviews section */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.review-card {
+    background-color: #fff;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.review-card::before {
+    content: """;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 3rem;
+    color: rgba(177, 85, 34, 0.1);
+    line-height: 1;
+}
+
+.review-content {
+    padding-left: 1rem;
+    font-style: italic;
+}
+
+.review-author {
+    margin-top: 0.75rem;
+    text-align: right;
+    font-weight: bold;
+    color: #555;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: right;
+}
+
+/* Add review section - only visible when logged in */
+.add-review-section {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Details - HairBedsnBeers</title>
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="HairBedsnBeers" class="logo">
+        </a>
+        <nav>
+            <a href="index.html" id="home-link" class="nav-link">Home</a>
+            <a href="login.html" id="login-link" class="nav-link">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="place-details">
+            <h2>Place Details</h2>
+            <div class="place-info">
+                <h3>Loading...</h3>
+                <p><span class="label">Host:</span> <span id="place-owner">Loading...</span></p>
+                <p><span class="label">Price per night:</span> <span id="place-price">Loading...</span></p>
+                <p><span class="label">Description:</span> <span id="place-description">Loading...</span></p>
+                <p><span class="label">Amenities:</span> <span id="place-amenities">Loading...</span></p>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>Reviews</h2>
+            <div class="reviews-list">
+                <p>Loading reviews...</p>
+            </div>
+        </section>
+
+        <section id="add-review" class="add-review-section">
+            <h2>Add a Review</h2>
+
+            <!-- Error message container -->
+            <div id="review-error" class="error-message" role="alert" style="display: none;"></div>
+
+            <form id="review-form">
+                <div class="form-group">
+                    <label for="review-text">Your Review: <span class="required">*</span></label>
+                    <textarea id="review-text" name="review-text" rows="4"
+                              required minlength="10" maxlength="1000"
+                              aria-describedby="review-help"
+                              placeholder="Please share your experience with this place..."></textarea>
+                    <div id="review-help" class="help-text">Minimum 10 characters, maximum 1000 characters.</div>
+                    <div id="char-count" class="char-count">0/1000</div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Submit Review</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 HairBedsnBeers, all rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

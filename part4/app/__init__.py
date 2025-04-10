@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from flask_restx import Api
 from app.api.v1.users import api as users_ns
 from app.api.v1.amenities import api as amenities_ns
@@ -15,6 +16,7 @@ jwt = JWTManager()
 
 def create_app(config_class="config.DevelopmentConfig"):
     app = Flask(__name__)
+
     app.config.from_object(config_class)
 
     api = Api(app, version='1.0', title='HBnB API',
@@ -37,5 +39,8 @@ def create_app(config_class="config.DevelopmentConfig"):
 
     # initialize db
     db.init_app(app)
+
+    # initialize cors
+    CORS(app, resources={r"/*": {"origins": "*"}}, allow_headers=["Content-Type", "Authorization"])
 
     return app

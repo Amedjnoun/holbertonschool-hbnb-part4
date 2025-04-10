@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Review - HairBedsnBeers</title>
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="HairBedsnBeers" class="logo">
+        </a>
+        <nav>
+            <a href="index.html" id="home-link" class="nav-link">Home</a>
+            <a href="login.html" id="login-link" class="nav-link">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section id="add-review">
+            <h2>Add a Review for <span id="place-name">Loading...</span></h2>
+
+            <!-- Error message container will be populated by JavaScript -->
+            <div id="review-error" class="error-message" role="alert" style="display: none;"></div>
+
+            <form id="review-form">
+                <div class="form-group">
+                    <label for="review-comment">Your Review: <span class="required">*</span></label>
+                    <textarea id="review-comment" name="review-comment" rows="4"
+                              required minlength="10" maxlength="1000"
+                              aria-describedby="comment-help"
+                              placeholder="Please share your experience with this place..."></textarea>
+                    <div id="comment-help" class="help-text">Minimum 10 characters, maximum 1000 characters.</div>
+                    <div id="char-count" class="char-count">0/1000</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <select id="rating" name="rating" required>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Average</option>
+                        <option value="2">2 - Poor</option>
+                        <option value="1">1 - Terrible</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Submit Review</button>
+                    <a href="#" id="cancel-review" class="btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 HairBedsnBeers, all rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
