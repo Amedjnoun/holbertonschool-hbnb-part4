@@ -1,5 +1,5 @@
 ## Disclaimer
-For more information about this project, please refer to Part 1 README.md, Part 2 README.md and Part3 README.md!
+For more information about this project, please refer to Part 1 README.md, Part 2 README.md and Part 3 README.md!
 
 
 # HairBedsnBeers (HBnB) - Part 4: Web Client
