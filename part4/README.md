@@ -9,7 +9,7 @@ This is the fourth part of the HairBedsnBeers project, focusing on the web clien
 
 ## Features
 - Browse available places
-- Filter places by price, city, and country
+- Filter places by price, city
 - View detailed information about places
 - User authentication (login/logout)
 - Add and view reviews for places
